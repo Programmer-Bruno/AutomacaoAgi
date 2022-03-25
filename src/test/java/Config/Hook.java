@@ -11,18 +11,16 @@ public class Hook {
     public static WebDriver navegador = driver();
 
     @Before
-
     public static WebDriver driver() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--kiosk");
-        navegador = new ChromeDriver(options);
+        navegador = new ChromeDriver();
+        navegador.get("https://www.grocerycrud.com/v1.x/demo/my_boss_is_in_a_hurry/bootstrap");
         return navegador;
     }
 
     @After
     public void fechar() {
-        navegador.close();
+        navegador.quit();
     }
 
 }

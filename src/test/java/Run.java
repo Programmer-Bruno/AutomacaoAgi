@@ -1,25 +1,15 @@
-import PageAction.AGI;
-import PageObject.Home;
-import Utils.Utils;
+import PageAction.South;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import static Config.Hook.navegador;
-
 public class Run {
-    AGI agi = new AGI();
+    South south = new South();
 
     @Test
-    public void validarPesquisa() throws InterruptedException, IOException {
-        agi.VerificarMudancaDePaginaAoPesquisar();
-    }
+    public void inclusaoFormulario() throws InterruptedException, IOException {
+        south.inclusaoFormulario();
 
-    @Test
-    public void validarSeBotaoFuncionaAposScroll() throws InterruptedException, IOException {
-        agi.validarSeBotaoPesquisarContinuaDisponivel();
     }
 
 }
